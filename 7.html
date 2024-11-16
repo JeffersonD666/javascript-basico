@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números del 0 al solicitado</title>
+</head>
+<body>
+    <h1>Números del 0 al solicitado</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="imprimirNumeros()">Imprimir</button>
+    <p>Revisa la consola para ver el resultado.</p>
+
+    <script>
+        function imprimirNumeros() {
+            let numero = parseInt(document.getElementById("numero").value);
+            for (let i = 0; i <= numero; i++) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+</html>

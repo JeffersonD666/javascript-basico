@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secuencia Ascendente</title>
+</head>
+<body>
+    <h1>Secuencia Ascendente</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número positivo">
+    <button onclick="generarSecuencia()">Generar</button>
+    <p>Revisa la consola para ver los resultados.</p>
+
+    <script>
+        function generarSecuencia() {
+            let numero = parseInt(document.getElementById("numero").value);
+            let i = 1;
+
+            while (i <= numero) {
+                console.log(i);
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

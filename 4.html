@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <input type="number" id="numero1" placeholder="Ingresa el primer número">
+    <input type="number" id="numero2" placeholder="Ingresa el segundo número">
+    <input type="text" id="operador" placeholder="Ingresa un operador (+, -, *, /)">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let numero1 = parseFloat(document.getElementById("numero1").value);
+            let numero2 = parseFloat(document.getElementById("numero2").value);
+            let operador = document.getElementById("operador").value.trim();
+            let resultado;
+
+            switch (operador) {
+                case "+":
+                    resultado = numero1 + numero2;
+                    break;
+                case "-":
+                    resultado = numero1 - numero2;
+                    break;
+                case "*":
+                    resultado = numero1 * numero2;
+                    break;
+                case "/":
+                    resultado = numero2 !== 0 ? numero1 / numero2 : "Error: División entre 0";
+                    break;
+                default:
+                    resultado = "Operador no válido.";
+            }
+
+            document.getElementById("resultado").textContent = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>

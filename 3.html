@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positivo, Negativo o Cero</title>
+</head>
+<body>
+    <h1>Determinar si un número es positivo, negativo o cero</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="verificarNumero()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            let numero = parseFloat(document.getElementById("numero").value);
+            if (numero > 0) {
+                document.getElementById("resultado").textContent = 
+                    "El número " + numero + " es positivo.";
+            } else if (numero < 0) {
+                document.getElementById("resultado").textContent = 
+                    "El número " + numero + " es negativo.";
+            } else {
+                document.getElementById("resultado").textContent = 
+                    "El número es cero.";
+            }
+        }
+    </script>
+</body>
+</html>

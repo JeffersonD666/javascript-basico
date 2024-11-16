@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación</title>
+</head>
+<body>
+    <h1>Rango de Calificaciones</h1>
+    <input type="number" id="calificacion" placeholder="Ingresa tu calificación (0-100)">
+    <button onclick="evaluarCalificacion()">Evaluar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function evaluarCalificacion() {
+            let calificacion = parseInt(document.getElementById("calificacion").value);
+            let rango;
+
+            switch (true) {
+                case (calificacion >= 90 && calificacion <= 100):
+                    rango = "A";
+                    break;
+                case (calificacion >= 80 && calificacion < 90):
+                    rango = "B";
+                    break;
+                case (calificacion >= 70 && calificacion < 80):
+                    rango = "C";
+                    break;
+                case (calificacion >= 60 && calificacion < 70):
+                    rango = "D";
+                    break;
+                case (calificacion >= 0 && calificacion < 60):
+                    rango = "F";
+                    break;
+                default:
+                    rango = "Calificación no válida.";
+            }
+
+            document.getElementById("resultado").textContent = "Tu rango es: " + rango;
+        }
+    </script>
+</body>
+</html>

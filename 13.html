@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Números Positivos</title>
+</head>
+<body>
+    <h1>Suma de Números Positivos</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+    <button onclick="sumarNumeros()">Sumar</button>
+    <p>Revisa la consola para ver el resultado.</p>
+
+    <script>
+        function sumarNumeros() {
+            let suma = 0;
+            let numero;
+            do {
+                numero = parseInt(prompt("Ingresa un número positivo (ingresa un número negativo para finalizar):"));
+                if (numero >= 0) {
+                    suma += numero;
+                }
+            } while (numero >= 0);
+            console.log("La suma de los números ingresados es:", suma);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías de Edad</title>
+</head>
+<body>
+    <h1>Categorías de Edad</h1>
+    <input type="number" id="edad" placeholder="Ingresa tu edad">
+    <button onclick="categorizarEdad()">Determinar Categoría</button>
+    <p id="resultado"></p>
+
+    <script>
+        function categorizarEdad() {
+            let edad = parseInt(document.getElementById("edad").value);
+            let categoria;
+
+            switch (true) {
+                case (edad >= 0 && edad <= 12):
+                    categoria = "Niño";
+                    break;
+                case (edad >= 13 && edad <= 17):
+                    categoria = "Adolescente";
+                    break;
+                case (edad >= 18 && edad <= 64):
+                    categoria = "Adulto";
+                    break;
+                case (edad >= 65):
+                    categoria = "Adulto Mayor";
+                    break;
+                default:
+                    categoria = "Edad no válida.";
+            }
+
+            document.getElementById("resultado").textContent = "Categoría: " + categoria;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatoria y Promedio</title>
+</head>
+<body>
+    <h1>Sumatoria y Promedio</h1>
+    <input type="number" id="inicio" placeholder="Número inicial">
+    <input type="number" id="fin" placeholder="Número final">
+    <button onclick="calcularSumatoria()">Calcular</button>
+    <p>Revisa la consola para ver los resultados.</p>
+
+    <script>
+        function calcularSumatoria() {
+            let inicio = parseInt(document.getElementById("inicio").value);
+            let fin = parseInt(document.getElementById("fin").value);
+            let suma = 0;
+            let contador = 0;
+
+            for (let i = inicio; i <= fin; i++) {
+                suma += i;
+                contador++;
+            }
+
+            let promedio = suma / contador;
+            console.log("Sumatoria:", suma);
+            console.log("Promedio:", promedio);
+        }
+    </script>
+</body>
+</html>

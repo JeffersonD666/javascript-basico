@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Pares e Impares</title>
+</head>
+<body>
+    <h1>Suma de Pares e Impares</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número positivo">
+    <button onclick="calcularSumas()">Calcular</button>
+    <p>Revisa la consola para ver los resultados.</p>
+
+    <script>
+        function calcularSumas() {
+            let numero = parseInt(document.getElementById("numero").value);
+            let sumaPares = 0;
+            let sumaImpares = 0;
+            let i = 1;
+
+            while (i <= numero) {
+                if (i % 2 === 0) {
+                    sumaPares += i;
+                } else {
+                    sumaImpares += i;
+                }
+                i++;
+            }
+
+            console.log("Suma de números pares:", sumaPares);
+            console.log("Suma de números impares:", sumaImpares);
+        }
+    </script>
+</body>
+</html>

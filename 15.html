@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Comidas Rápidas</title>
+</head>
+<body>
+    <h1>Menú de Comidas Rápidas</h1>
+    <p>Revisa la consola para ver el total de tus pedidos.</p>
+
+    <script>
+        function menuComidas() {
+            let total = 0;
+            let opcion;
+            do {
+                opcion = parseInt(prompt("Elige una opción:\n1. Hamburguesa - $5\n2. Pizza - $8\n3. Perrito Caliente - $3\n4. Finalizar pedido"));
+                switch (opcion) {
+                    case 1:
+                        total += 5;
+                        alert("Has elegido una hamburguesa. $5 añadido al total.");
+                        break;
+                    case 2:
+                        total += 8;
+                        alert("Has elegido una pizza. $8 añadido al total.");
+                        break;
+                    case 3:
+                        total += 3;
+                        alert("Has elegido un perrito caliente. $3 añadido al total.");
+                        break;
+                    case 4:
+                        alert("Pedido finalizado.");
+                        break;
+                    default:
+                        alert("Opción no válida.");
+                }
+            } while (opcion !== 4);
+            alert("El costo total de tus pedidos es: $" + total);
+            alert("¡Gracias por tu compra!");
+        }
+
+        menuComidas();
+    </script>
+</body>
+</html>

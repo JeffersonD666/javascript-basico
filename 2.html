@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobación de Examen</title>
+</head>
+<body>
+    <h1>¿El estudiante ha aprobado el examen?</h1>
+    <input type="number" id="calificacion" placeholder="Ingresa la calificación">
+    <button onclick="verificarAprobacion()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarAprobacion() {
+            let calificacion = parseFloat(document.getElementById("calificacion").value);
+            if (calificacion >= 60) {
+                document.getElementById("resultado").textContent = 
+                    "El estudiante ha aprobado con una calificación de " + calificacion + ".";
+            } else {
+                document.getElementById("resultado").textContent = 
+                    "El estudiante no ha aprobado. Su calificación es " + calificacion + ".";
+            }
+        }
+    </script>
+</body>
+</html>
